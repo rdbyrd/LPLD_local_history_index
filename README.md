@@ -1,2 +1,2 @@
-# LPLD_local_history_index
-A file index for locating documents at the Lawrenceburg Public Library
+# Index
+This project is designed to create an index for locating vertical files at the .
