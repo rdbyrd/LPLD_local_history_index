@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.0.1
+-- version 4.8.3
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 29, 2018 at 09:52 PM
--- Server version: 10.1.32-MariaDB
--- PHP Version: 7.2.5
+-- Generation Time: Jan 16, 2019 at 07:20 PM
+-- Server version: 10.1.36-MariaDB
+-- PHP Version: 7.0.32
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -31,7 +31,6 @@ USE `index`;
 -- Table structure for table `files`
 --
 
-DROP TABLE IF EXISTS `files`;
 CREATE TABLE `files` (
   `id` int(15) NOT NULL,
   `filename` varchar(255) NOT NULL,
@@ -401,7 +400,6 @@ INSERT INTO `files` (`id`, `filename`, `category`, `subcategory`, `file_location
 -- Table structure for table `users`
 --
 
-DROP TABLE IF EXISTS `users`;
 CREATE TABLE `users` (
   `id` int(13) NOT NULL,
   `username` varchar(25) NOT NULL,
@@ -414,10 +412,9 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `username`, `password`, `role`) VALUES
-(1, 'LPLD Genealogy', '$2y$10$5zqm3hmaPTBlxIuRuBm8LuC0KSTXEepbs7EVFTa9sYPoEtGVGRzTa', 2),
-(3, 'testing', '$2y$10$8nJKo3020pcNZEse0Q8FLObRflrzHU2./rD7KOGTtKOCmp9I.Td2C', 1),
-(10, 'test', '$2y$10$J8V59p//IsRHptagiSTMgONCkrSKMHLuauzl.e2bR5dsrpCpDpM1S', 1),
-(11, 'admin', '$2y$10$UqGtpcoC6kurS49KJzWED.epq.OJr1OniB5EEqJ3UNwAZP66ZW4We', 2);
+(1, 'LPLD_Genealogy', '$2y$10$a9maiL14QmQ02DYITyWq5usXR5BoxRymv7wnkoq3fTaiDsFBWe4Ky', 2),
+(4, 'kmuenz', '$2y$10$2UvZzmFG8xwjRjRKeIicze5nx9fB0E.2T3hakkMO3uIfAqd6FQnz6', 2),
+(5, 'kpage', '$2y$10$cQV07bzoqHO7nPxXAKYsLOTuA2vgrJqviCxgxBJONRByNdFTAauMi', 2);
 
 --
 -- Indexes for dumped tables
@@ -452,7 +449,7 @@ ALTER TABLE `files`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(13) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(13) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
