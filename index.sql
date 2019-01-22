@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 16, 2019 at 07:20 PM
+-- Generation Time: Jan 22, 2019 at 08:15 PM
 -- Server version: 10.1.36-MariaDB
 -- PHP Version: 7.0.32
 
@@ -21,7 +21,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `index`
 --
-DROP DATABASE IF EXISTS `index`;
 CREATE DATABASE IF NOT EXISTS `index` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
 USE `index`;
 
@@ -179,7 +178,7 @@ INSERT INTO `files` (`id`, `filename`, `category`, `subcategory`, `file_location
 (142, 'Slater&#39;s Drum Corp', 'Organizations', 'Music', 'Lawrenceburg, Organizations', 'Indiana', 'Dearborn', 'Lawrenceburg', 'Lawrenceburg', '', '', ''),
 (143, 'St. Cecilia Musicale', 'Organizations', 'Music', 'Lawrenceburg, Organizations', 'Indiana', 'Dearborn', 'Lawrenceburg', 'Lawrenceburg', '', '', ''),
 (144, 'Masons, Odd Fellows, Knights of Pythias, O.V.A.', 'Organizations', '', 'Lawrenceburg, Organizations', 'Indiana', 'Dearborn', 'Lawrenceburg', 'Lawrenceburg', '', '', ''),
-(145, 'Oxbow, Inc.', 'Organizations', 'Preservation', 'Lawrenceburg, Organizations', 'Indiana', 'Dearborn', 'Lawrenceburg', 'Lawrenceburg', '', '', ''),
+(145, 'Oxbow, Inc.', 'Organizations', '', 'DC, Organizations, O', 'Indiana', 'Dearborn', '', '', '', '', 'Wetland Matters Newsletter, Conservation'),
 (146, 'Rivertown Players', 'Organizations', 'Theater', 'Lawrenceburg, Organizations', 'Indiana', 'Dearborn', 'Lawrenceburg', 'Lawrenceburg', '', '', ''),
 (147, 'Bald-Headed Club', 'Organizations', '', 'Lawrenceburg, Organizations', 'Indiana', 'Dearborn', 'Lawrenceburg', 'Lawrenceburg', '', '', ''),
 (148, 'Daughters of the American Revolution (D. A. R.)', 'Organizations', '', 'Lawrenceburg, Organizations', 'Indiana', 'Dearborn', 'Lawrenceburg', 'Lawrenceburg', '', '', ''),
@@ -372,9 +371,9 @@ INSERT INTO `files` (`id`, `filename`, `category`, `subcategory`, `file_location
 (338, 'Dearborn County Zoning Ordinance', 'Government', '', 'DC, G', 'Indiana', 'Dearborn', '', '', '', '', ''),
 (339, 'Dearborn County Graverobbers', 'History', '', 'DC, G', 'Indiana', 'Dearborn', '', '', '', '', ''),
 (340, 'Dearborn County Community Mental Health Center', 'Health', '', 'DC, Health', 'Indiana', 'Dearborn', '', '', '', '', ''),
-(342, 'Caesar Creek Township History', 'History', '', 'DC, History, C', 'Indiana', 'Dearborn', '', '', '', '', ''),
+(342, 'Caesar Creek Township History', 'History', '', 'DC, History, Township, C', 'Indiana', 'Dearborn', 'Caesar Creek', '', '', '', ''),
 (343, 'Clay Township History', 'History', '', 'DC, History, Township, C', 'Indiana', 'Dearborn', 'Clay', 'Dillsboro', '', '', 'Dillsboro History, Round Barn'),
-(344, 'Harrison Township History', 'History', '', 'DC, History, Township, Harrison', 'Indiana', 'Dearborn', 'Harrison', '', '', '', ''),
+(344, 'Harrison Township History', 'History', '', 'DC, History, Township, H', 'Indiana', 'Dearborn', 'Harrison', '', '', '', ''),
 (345, 'Hogan Township History', 'History', '', 'DC, History, Township, H', 'Indiana', 'Dearborn', 'Hogan', '', '', '', 'Old Wilmington School, Mt. Sinai, Crozier'),
 (346, 'Jackson Township History', 'History', '', 'DC, History, Township, J', 'Indiana', 'Dearborn', 'Jackson', '', '', '', 'Hubbell&#39;s Corner, Lawrenceville, Weisburg'),
 (347, 'Kelso Township History', 'History', '', 'DC, History, Township, K', 'Indiana', 'Dearborn', 'Kelso', '', '', '', 'Dover, New Alsace, St. Leon'),
@@ -391,8 +390,62 @@ INSERT INTO `files` (`id`, `filename`, `category`, `subcategory`, `file_location
 (357, 'Sparta Township History', 'History', '', 'DC, History, Township, S', 'Indiana', 'Dearborn', 'Sparta', '', 'Moore&#39;s Hill College (DC Schools)', '', 'Moore&#39;s Hill, Chesterville, Cold Springs'),
 (358, 'Washington Township History', 'History', '', 'DC, History,Township, W', 'Indiana', 'Dearborn', 'Washington', '', '', '', ''),
 (359, 'York Township History', 'History', '', 'DC, History, Township, Y', 'Indiana', 'Dearborn', 'York', '', '', '', 'Guilford, Bonnell, Yorkville'),
-(360, 'Dearborn County Highways', 'History', '', 'DC, History, H', 'Indiana', 'Dearborn', '', '', '', '', 'Route 50, Tanner&#39;s Creek Bridge &#34;Fly Over&#34;'),
-(361, 'Kibbey&#39;s Road and Toll Roads', 'History', '', 'DC, History, K', 'Indiana', 'Dearborn', '', '', '', '', 'Lawrenceburg and Guilford Turnpike Company, Manchester Lawrenceburg Turnpike, Tollgate Keepers');
+(360, 'Dearborn County Highways', 'History', '', 'DC, Roads, H', 'Indiana', 'Dearborn', '', '', '', '', 'Route 50, Tanner&#39;s Creek Bridge &#34;Fly Over&#34;'),
+(361, 'Toll Roads and Kibbey&#39;s Road', 'History', '', 'DC, Roads, T', 'Indiana', 'Dearborn', '', '', '', '', 'Lawrenceburg and Guilford Turnpike Company, Manchester Lawrenceburg Turnpike, Tollgate Keepers'),
+(362, 'Dearborn County Railroads', 'Transportation', '', 'DC, R', 'Indiana', 'Dearborn', '', '', '', '', 'C. L. and A. (Cincinnati, Lawrenceburg, and Aurora) Traction Line, New York Central Cincinnati to Indianapolis Line, George Hedford Dunn'),
+(363, 'Dearborn County Steamboats and River Navigation', 'Transportation', '', 'DC, Boats', 'Indiana', 'Dearborn', '', '', '', '', 'The Sultana Disaster (Civil War), Pat Rogers Steamboat Disaster August 1874'),
+(364, 'Dearborn County Underground Railroad', 'History', '', 'DC, U', 'Indiana', 'Dearborn', '', '', '', '', 'Elijah Anderson'),
+(365, 'Valley Woods Estates', 'History', '', 'DC, History, V', 'Indiana', 'Dearborn', 'Lawrenceburg', '', '', '', ''),
+(366, 'Dearborn County Westward Migration', 'History', '', 'DC, History, W', 'Indiana', 'Dearborn', '', '', '', '', ''),
+(367, 'Whitewater Canal', 'History', '', 'DC, W', 'Indiana', 'Dearborn', '', '', '', '', ''),
+(368, 'Dearborn County Homes and Historical Buildings', 'Historic Homes', '', 'DC, Historic Homes', 'Indiana', 'Dearborn', '', '', 'Valley Woods Estates', '', 'Guide to Historic Ridge Avenue'),
+(369, 'Dearborn County Historical Markers', 'Historic Sites', '', 'DC, H', 'Indiana', 'Dearborn', '', '', '', '', 'State Line Monument, East Fork Stone Chapel, James Buchanan Eads Plaque'),
+(370, 'Hoosier Homestead Farms', 'History', '', 'DC, H', 'Indiana', 'Dearborn', '', '', '', '', ''),
+(371, 'Dearborn County Inventors', 'History', '', 'DC, I', 'Indiana', 'Dearborn', '', '', '', '', 'Victor Oberting, A.D. Cook, William Langdale, Robert J. Nowlin, Michael Reiding, Edward J. Pennington'),
+(372, 'Dearborn County Jail Expansion', 'Government', '', 'DC, J', 'Indiana', 'Dearborn', '', '', '', '', ''),
+(373, 'Dearborn County Ku Klux Klan', 'Organization', '', 'DC, Organizations, K', 'Indiana', 'Dearborn', '', '', '', '', ''),
+(374, 'Dearborn County Land Grants', 'Government', '', 'DC, L', 'Indiana', 'Dearborn', '', '', '', '', ''),
+(375, 'Dearborn County Maps', 'Government', '', 'DC, M', 'Indiana', 'Dearborn', '', '', '', '', ''),
+(376, 'Dearborn County Marriage Mills', 'History', '', 'DC, M', 'Indiana', 'Dearborn', '', '', '', '', '&#34;Gretna Green&#34;'),
+(377, 'Dearborn County American Revolution', 'Military', 'History', 'DC, Military, American', 'Indiana', 'Dearborn', '', '', '', '', 'Early Militia, Soldiers of the American Revolution'),
+(378, 'Dearborn County Lochry Massacre', 'Military', 'History', 'DC, Military, American', 'Indiana', 'Dearborn', '', '', '', '', 'American Revolution, Lochry&#39;s Defeat, 200th Observance of Engagement'),
+(379, 'Dearborn County Civil War', 'Military', 'History', 'DC, Military, Civil', 'Indiana', 'Dearborn', '', '', '', '', 'Indiana Medal of Honor Winners, 3rd Calvary, 7th IN, 9th Calvary, 26th IN, 32nd IN, 37th IN, 52nd IN, 68th IN, 83rd IN, 139th IN, Camp Dearborn, Manchester Twp Draft Support Society'),
+(380, 'Dearborn County Grand Army of the Republic Post', 'Organization', 'Military', 'DC, Military, Civil', 'Indiana', 'Dearborn', '', '', '', '', 'Robert Huff Post No. 89'),
+(381, 'Dearborn County Civil War Generals', 'Military', 'History', 'DC, Military, Civil', 'Indiana', 'Dearborn', '', '', '', '', 'Don Carlos Buell, George P. Buell, Ebenezer Dumont, James H. Lane, Thomas J. Lucas, John McQuiston, Benjamin Spooner, John T. Wilder'),
+(382, 'Dearborn County Civil War Maps', 'Military', 'History', 'DC, Military, Civil', 'Indiana', 'Dearborn', '', '', '', '', ''),
+(383, 'Dearborn County Morgan&#39;s Raid', 'Military', 'History', 'DC, Military, Civil', 'Indiana', 'Dearborn', '', '', '', '', '&#34;Battle of Hardintown,&#34; Morgan&#39;s Trail'),
+(384, 'Dearborn County Korean War', 'Military', 'History', 'DC, Military, Korean', 'Indiana', 'Dearborn', '', '', '', '', 'Korean War Memorial'),
+(385, 'Dearborn County Mexican War', 'Military', 'History', 'DC, Military, Mexican', 'Indiana', 'Dearborn', '', '', '', '', ''),
+(386, 'Dearborn County Operation Iraqi Freedom', 'Military', 'History', 'DC, Military, O', 'Indiana', 'Dearborn', '', '', '', '', 'Brett Bondurant'),
+(387, 'Dearborn County Spanish American War', 'Military', 'History', 'DC, Military, S', 'Indiana', 'Dearborn', '', '', '', '', '161st IN'),
+(388, 'Dearborn County War of 1812', 'Military', 'History', 'DC, Military, W', 'Indiana', 'Dearborn', '', '', '', '', 'War of 1812 Soldiers Militia'),
+(389, 'Dearborn County World War I', 'Military', 'History', 'DC, Military, W', 'Indiana', 'Dearborn', '', '', '', '', ''),
+(390, 'Dearborn County World War II', 'Military', 'History', 'DC, Military, W', 'Indiana', 'Dearborn', '', '', '', '', ''),
+(391, 'Dearborn County Vietnam War', 'Military', 'History', 'DC, Military, V', 'Indiana', 'Dearborn', '', '', '', '', ''),
+(392, 'Dearborn County Monuments', 'History', '', 'DC, M', 'Indiana', 'Dearborn', '', '', '', '', ''),
+(393, 'Dearborn County Murders, A-B', 'History', '', 'DC, M', 'Indiana', 'Dearborn', '', '', '', '', 'Agrue/Carter, Bailey, Boyd/Stevens, Bradley'),
+(394, 'Dearborn County Murders, C - F', 'History', '', 'DC, M', 'Indiana', 'Dearborn', '', '', '', '', 'Cadle/Chance, Cheek(Mac), Clark/Harwood, Croxton/Bruce, Edwards/Terrill'),
+(395, 'Dearborn County Murders, G - K', 'History', '', 'DC, M', 'Indiana', 'Dearborn', '', '', '', '', 'Goodwin, Gutzwiller, Hackman, Heck, Hillman/Ross, Jennings, Kaiser, Kunkel/Marquith, Kuntzler'),
+(396, 'Dearborn County Murders, L - R', 'History', '', 'DC, M', 'Indiana', 'Dearborn', '', '', '', '', 'Lange, Marshall, McCane, McClain, Miller/Truitt, Murphy/Owens, Nurrenberg, Owens, Rayles/Newton, Rossfield/Ross'),
+(397, 'Dearborn County Murders, S - Z', 'History', '', 'DC, M', 'Indiana', 'Dearborn', '', '', '', '', 'Scoggin/Jackson, Shanks, Sherman Baby, Smeltzer(Schmeltzer), Storey, Tandy, Terrill/McNeely, Tibbitts, Warren/Fuller, Watkins lynching, Washington, Wells'),
+(398, 'Dearborn County Music and Musicians', 'Arts', '', 'DC, M', 'Indiana', 'Dearborn', '', '', '', '', ''),
+(399, 'Dearborn County National Register of Historic Places', 'Historic Sites', '', 'DC, N', 'Indiana', 'Dearborn', '', '', '', '', ''),
+(400, 'Dearborn County Nature Trails', 'Parks and Recreation', '', 'DC, N', 'Indiana', 'Dearborn', '', '', '', '', ''),
+(401, 'Dearborn County Newspapers', 'Media', '', 'DC, N', 'Indiana', 'Dearborn', '', '', '', '', ''),
+(402, 'Dearborn County Northwest Territory', 'History', '', 'DC, N', 'Indiana', 'Dearborn', '', '', '', '', 'Northwest Territory 1938 Celebration'),
+(403, 'Dearborn County Night Riders', 'History', '', 'DC, N', 'Indiana', 'Dearborn', '', '', '', '', 'Tobacco'),
+(404, 'Dearborn County Chamber of Commerce', 'Organization', '', 'DC, Organizations, C', 'Indiana', 'Dearborn', '', '', '', '', 'Chamber of Commerce Annual Report 2000'),
+(405, 'Dearborn County Chamber Express', 'Organization', 'Media', 'DC, Organizations, C', 'Indiana', 'Dearborn', '', '', 'See Periodical Shelf', '', 'Chamber of Commerce Publication 2003-2012'),
+(406, 'Dearborn County Chamber of  Commerce Communicator', 'Organization', 'Media', 'DC, Organizations, C', 'Indiana', 'Dearborn', '', '', 'See Periodical Shelf', '', 'Chamber of Commerce Publication 1997-2003'),
+(407, 'Dearborn County Council on Aging', 'Organization', '', 'DC, Organizations, C', 'Indiana', 'Dearborn', '', '', '', '', ''),
+(408, 'Dearborn Highlands Arts Council', 'Organization', 'Arts', 'DC, Organizations, H', 'Indiana', 'Dearborn', '', '', '', '', 'Programs and Illustrated Calendars'),
+(409, 'Dearborn Highlands Arts Council Newsletters', 'Organization', 'Media', 'DC, Organizations, H', 'Indiana', 'Dearborn', '', '', '', '', ''),
+(410, 'Dearborn County Historical Society', 'Organization', 'History', 'DC, Organizations, H', 'Indiana', 'Dearborn', '', '', 'Vance Tousey Home, &#34;Doorway to History&#34; Newsletters', '', ''),
+(411, 'Dearborn County Farm Bureau', 'Organization', '', 'DC, Organizations, F', 'Indiana', 'Dearborn', '', '', '', '', ''),
+(412, 'Laughery Club', 'Organization', '', 'DC, Organizations, L', 'Indiana', 'Dearborn', '', '', '', '', 'Men&#39;s Club'),
+(413, 'Hoosier Hills Adult Literacy League', 'Organization', '', 'DC, Organizations, H', 'Indiana', 'Dearborn', '', '', '', '', 'Literacy Lines Newsletter'),
+(414, 'Dearborn County Humane Society', 'Organization', '', 'DC, Organizations, H', 'Indiana', 'Dearborn', '', '', '', 'P.A.W.S. (Partners for Animal Welfare Society), Dearborn and Ohio Counties Humane Society', ''),
+(415, 'Dearborn County Musical Organizations', 'Organization', '', 'DC, Organizations, M', 'Indiana', 'Dearborn', '', '', 'Liedertafel Society, St. Cecilia Musicale Society, Rivertown Tales: Recreation and Social Clubs', '', 'S.P.E.B.S.Q.S.A. (Society for the Preservation of Barbershop Singing in America), Aurora Orpheus Club, Saegerbund of Aurora');
 
 -- --------------------------------------------------------
 
@@ -412,7 +465,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `username`, `password`, `role`) VALUES
-(1, 'LPLD_Genealogy', '$2y$10$a9maiL14QmQ02DYITyWq5usXR5BoxRymv7wnkoq3fTaiDsFBWe4Ky', 2),
+(1, 'LPLD Genealogy', '$2y$10$3FnM98Tw8W6v5lkbu/CZpeIFTujneSliCSCRWJC1XKl12Hcu7E1qy', 2),
 (4, 'kmuenz', '$2y$10$2UvZzmFG8xwjRjRKeIicze5nx9fB0E.2T3hakkMO3uIfAqd6FQnz6', 2),
 (5, 'kpage', '$2y$10$cQV07bzoqHO7nPxXAKYsLOTuA2vgrJqviCxgxBJONRByNdFTAauMi', 2);
 
@@ -443,7 +496,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `files`
 --
 ALTER TABLE `files`
-  MODIFY `id` int(15) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=362;
+  MODIFY `id` int(15) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=416;
 
 --
 -- AUTO_INCREMENT for table `users`
