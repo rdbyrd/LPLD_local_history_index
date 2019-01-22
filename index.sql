@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 22, 2019 at 08:15 PM
+-- Generation Time: Jan 22, 2019 at 08:23 PM
 -- Server version: 10.1.36-MariaDB
 -- PHP Version: 7.0.32
 
@@ -30,6 +30,7 @@ USE `index`;
 -- Table structure for table `files`
 --
 
+DROP TABLE IF EXISTS `files`;
 CREATE TABLE `files` (
   `id` int(15) NOT NULL,
   `filename` varchar(255) NOT NULL,
@@ -453,6 +454,7 @@ INSERT INTO `files` (`id`, `filename`, `category`, `subcategory`, `file_location
 -- Table structure for table `users`
 --
 
+DROP TABLE IF EXISTS `users`;
 CREATE TABLE `users` (
   `id` int(13) NOT NULL,
   `username` varchar(25) NOT NULL,
