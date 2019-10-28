@@ -43,7 +43,7 @@ if (($_SESSION['role']) != 2) {
 // set up a row for each record
             echo "<tr>";
             echo "<td><b><a href='account_details.php?id=" . $row->id . "'</a>" . $row->username . "</b></td>";
-            echo "<td>" . $row->role . "</td>";
+            echo "<td><b><a href='account_details.php?id=" . $row->id . "'</a>" . $row->role . "</td>";
             echo "</tr>";
         }
 
