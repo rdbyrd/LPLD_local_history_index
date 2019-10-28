@@ -20,7 +20,7 @@ require_once 'includes/database.php';
 
 <div class="container">
     <a class='btn btn-outline-success' href='add.php'>Add Record</a><br/><br/>
-    <a class='btn btn-outline-info' href='index_all_records.php'>Edit Records</a><br/><br/>
+    <a class='btn btn-outline-info' href='home.php'>Edit Records</a><br/><br/>
 </div>
 
 <?php

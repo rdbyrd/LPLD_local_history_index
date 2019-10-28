@@ -1,4 +1,5 @@
 <?php
+
 //start a PHP session that will hold user information. If none is assigned, proceed without admin access.
 //admin features are only unlocked if the role is set to 2.
 

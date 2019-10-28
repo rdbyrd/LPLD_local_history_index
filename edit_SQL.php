@@ -53,4 +53,4 @@ if (!$query) {
 
 $db->close();
 
-header("Location: index_all_records.php");
+header("Location: search_results.php");

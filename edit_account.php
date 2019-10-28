@@ -58,7 +58,7 @@ if (!$query) {
             <form action="updateAccount_SQL.php" method="post">
                 <table>
                     <label for="username">Username (optional):</label>
-                    <input type="text" name="username" value="<?= $row['username'] ?>" class="form-control" required>
+                    <input type="text" name="username" value="<?= $row['username'] ?>" class="form-control" required pattern=".*\S+.*" title="Space only entries are not allowed.">
                     <br/>
 
                     <label for="password">Password: </label>

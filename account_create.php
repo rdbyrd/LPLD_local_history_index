@@ -28,7 +28,7 @@ if (($_SESSION['role']) != 2) {
 
         <br/>
         <label for="username">Username</label><br/>
-        <input type="text" name="username" class="form-control" autofocus required>
+        <input type="text" name="username" class="form-control" autofocus required pattern=".*\S+.*" title="Space only entries are not allowed.">
         <br/>
         <label for="password">Password</label><br/>
         <input type="password" name="password" class="form-control" value=""required>

@@ -15,7 +15,7 @@ require_once 'includes/header.php';
     <h3>Search for Local History Vertical Files:</h3><br/>
 
     <!--Search feature-->
-    <form action="search_results.php" method="post" class="form-inline">
+    <form action="set_search.php" method="get" class="form-inline">
         <input class="form-control mr-sm-2" type="search" name="search" placeholder="Type in a search term" aria-label="Search">
         <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Search</button>
     </form>

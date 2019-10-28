@@ -23,7 +23,7 @@ if ($db->query($sql) === TRUE) {
     <div class="jumbotron jumbotron-fluid">
     <div class="container">
         <h1>Local History File Index</h1>
-        <h2>Record deleted. Return <a href="home.php">Home</a> or go to the <a href="index_all_records.php">Index</a>.</h2>
+        <h2>Record deleted. Return <a href="home.php">Home</a> or go to the last <a href="search_results.php">search</a>.</h2>
     </div>
 </div>
     <?php

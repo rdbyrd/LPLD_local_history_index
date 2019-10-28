@@ -24,7 +24,7 @@ if (($_SESSION['role']) == null) {
         <div class="form-row">
             <div class="form-group col-md-4">
                 <label for="filename">File Name</label>
-                <input type="text" name="filename" class="form-control" placeholder="File name" autofocus required>
+                <input type="text" name="filename" class="form-control" placeholder="File name" autofocus required pattern=".*\S+.*" title="Space only entries are not allowed.">
             </div>
             <div class="form-group col-md-4">
                 <label for="subject">Category</label>
